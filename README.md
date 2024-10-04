@@ -1,36 +1,43 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Soluções Para Você
 
-## Getting Started
+## Descrição
 
-First, run the development server:
+O **Soluções Para Você** é um e-commerce moderno e responsivo que oferece uma ampla gama de produtos para facilitar a sua vida. Com uma interface intuitiva e um sistema de pagamentos seguro, proporcionamos uma experiência de compra online eficiente e confiável.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Funcionalidades
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Cadastro de Usuários:** Registro e autenticação de contas com segurança.
+- **Catálogo de Produtos:** Pesquisa e navegação por categorias com filtros avançados.
+- **Carrinho de Compras:** Adição, remoção e atualização de itens no carrinho com cálculo automático de valores.
+- **Pagamento Seguro:** Processamento de pagamentos com Stripe, garantindo transações seguras.
+- **Painel de Administração:** Gerenciamento de produtos, pedidos e usuários através de uma interface dedicada para administradores.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tecnologias Utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Frontend:
 
-## Learn More
+- **Next.js 13:** Framework React que permite renderização híbrida e melhora a performance de SEO.
+- **React.js:** Biblioteca JavaScript para criação de interfaces dinâmicas e componentes reutilizáveis.
+- **TypeScript:** Superconjunto de JavaScript que adiciona tipagem estática para maior segurança no código.
+- **Tailwind CSS:** Biblioteca de classes utilitárias para estilização rápida e eficiente do layout responsivo.
 
-To learn more about Next.js, take a look at the following resources:
+### Backend:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Next.js API Routes:** Utilizadas para criar rotas do lado do servidor e processar dados.
+- **Prisma:** ORM utilizado para interagir com o banco de dados de maneira eficiente e segura.
+- **Stripe:** Plataforma de pagamentos integrada para processar transações financeiras.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Banco de Dados:
 
-## Deploy on Vercel
+- **PostgreSQL:** Banco de dados relacional utilizado junto ao Prisma para armazenar informações de produtos, usuários e pedidos.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Pré-requisitos
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Antes de executar o projeto, você precisa ter instalado:
+
+- **Node.js:** Para rodar o ambiente de desenvolvimento.
+- **npm** Gerenciador de pacotes JavaScript.
+- **PostgreSQL:** Para configurar o banco de dados.
+
+
