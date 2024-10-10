@@ -9,7 +9,7 @@ function Footer() {
         { id: 3, name: "Categoria 3" },
     ]; */}
         <footer className="py-8 bg-blue-500 text-center shadow-md">
-            <div className="max-w-screen-xl mx-auto px-4">
+            <div className=" mx-auto px-4 max-w-[1450px]">
                 <div className="flex flex-col sm:flex-row justify-between mb-6">
                     <div className="flex-1 mb-4">
                         <h3 className="text-lg font-semibold text-white">Departamentos</h3>
