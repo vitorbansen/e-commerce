@@ -108,7 +108,7 @@ export default function EditCategoryPage({ params }: { params: { id: string } })
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 text-gray-900">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold text-gray-900">Editar Categoria: {name}</h1>
         <Button variant="outline" onClick={() => router.back()}>

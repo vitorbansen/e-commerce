@@ -43,7 +43,7 @@ export async function GET(request: NextRequest) {
   }
 }
 
-// POST /api/cart - Adicionar item ao carrinho
+// POST /api/cart - Adicionar item ao carrinho (não permite duplicatas)
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -78,40 +78,29 @@ export async function POST(request: NextRequest) {
       }
     })
 
-    let cartItem
-
     if (existingCartItem) {
-      // Atualizar quantidade
-      cartItem = await prisma.cartItem.update({
-        where: { id: existingCartItem.id },
-        data: {
-          quantity: existingCartItem.quantity + quantity
-        },
-        include: {
-          product: {
-            include: {
-              category: true
-            }
-          }
-        }
-      })
-    } else {
-      // Criar novo item
-      cartItem = await prisma.cartItem.create({
-        data: {
-          userId,
-          productId,
-          quantity
-        },
-        include: {
-          product: {
-            include: {
-              category: true
-            }
-          }
-        }
-      })
+      // Produto já existe, retornar erro
+      return NextResponse.json(
+        { error: 'Produto já está no carrinho' },
+        { status: 400 }
+      )
     }
+
+    // Criar novo item
+    const cartItem = await prisma.cartItem.create({
+      data: {
+        userId,
+        productId,
+        quantity
+      },
+      include: {
+        product: {
+          include: {
+            category: true
+          }
+        }
+      }
+    })
 
     return NextResponse.json(cartItem, { status: 201 })
   } catch (error) {
@@ -122,4 +111,3 @@ export async function POST(request: NextRequest) {
     )
   }
 }
-

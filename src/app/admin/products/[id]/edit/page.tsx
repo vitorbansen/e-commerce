@@ -253,7 +253,7 @@ export default function EditProductPage() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 text-gray-900">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <Link

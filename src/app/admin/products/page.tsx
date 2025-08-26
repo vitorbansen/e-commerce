@@ -143,7 +143,7 @@ export default function AdminProductsPage() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 text-gray-900">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold text-gray-900">Produtos</h1>
         <Link href="/admin/products/new">
